@@ -203,7 +203,7 @@ export default function ProductsPage() {
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label>Category</Label>
-                  <Select value={formData.category} onValueChange={(val) => setFormData({...formData, category: val})}>
+                  <Select value={formData.category} onValueChange={(val) => setFormData({...formData, category: val || ""})}>
                     <SelectTrigger><SelectValue placeholder="Select a category" /></SelectTrigger>
                     <SelectContent>
                       {categories.length === 0 ? (
